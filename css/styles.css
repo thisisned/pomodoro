@@ -45,4 +45,5 @@ div {
   width: 80px;
   padding: 10px;
   line-height: 3em;
+  cursor: pointer;
 }
