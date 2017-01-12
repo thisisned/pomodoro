@@ -1,0 +1,48 @@
+/* Obviously needs more CSS duh */
+
+html {
+  text-align: center;
+  font-family: Helvetica;
+}
+
+div {
+  display: block;
+  border: 1px solid black;
+}
+
+#timer {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  margin: 55px auto;
+  border-radius: 45%;
+}
+
+#clock {
+  position: relative;
+  top: 30%;
+  width: 60%;
+  margin: auto;
+  padding: 5px;
+}
+
+#clock div {
+  position: relative;
+  top: 30%;
+  display: inline-block;
+  font-size: 50px;
+  padding: 8px;
+}
+
+#controls {
+  position: relative;
+  min-width: 400px;
+}
+
+#controls div {
+  display: inline-block;
+  height: 50px;
+  width: 80px;
+  padding: 10px;
+  line-height: 3em;
+}
