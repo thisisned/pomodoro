@@ -2,8 +2,10 @@ var work_period = 25 * 60;
 var break_period = 5 * 60;
 var time_remaining = work_period;
 var running = false;
-var next_state = "Break";
+var next_state = "Break Time!";
 var repeater;
+
+var audio = new Audio('assets/ding.mp3');
 
 $(document).ready(function(){
 
@@ -17,7 +19,7 @@ $(document).ready(function(){
 
 function countdown() {
   $("#paused").text("");
-  if (next_state === "Break") {
+  if (next_state === "Break Time!") {
     $("#status").text("Work Time");
   }
   if (running === false) {
@@ -30,12 +32,13 @@ function countdown() {
     timerDisplay(time_remaining);
     if (time_remaining === 0) {
       $("#status").text(next_state);
+      audio.play();
       switch (next_state) {
         case "Work Time":
         time_remaining = work_period;
-        next_state = "Break";
+        next_state = "Break Time!";
         break;
-        case "Break":
+        case "Break Time!":
         time_remaining = break_period;
         next_state = "Work Time";
         break;
@@ -57,7 +60,7 @@ function reset() {
   clearInterval(repeater);
   running = false;
   time_remaining = work_period;
-  next_state = "Break";
+  next_state = "Break Time!";
   timerDisplay(time_remaining);
   $("#status").text("");
 }
