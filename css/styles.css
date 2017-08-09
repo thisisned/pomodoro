@@ -1,25 +1,81 @@
-/* Obviously needs more CSS duh */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 
 body {
   text-align: center;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   background-color: teal;
 }
 
 h1 {
-  margin-top: 50px;
+  margin: 30px;
+  font-size: 24px;
+}
+
+#settings {
+  width: 50%;
+  min-width: 350px;
+  margin: 0 auto;
+}
+
+#timeset, #breakset {
+  width: 150px;
+  font-size: 0;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #70a6ff;
+  cursor: default;
+}
+
+.inactive {
+  opacity: 0.5;
+}
+
+.set-head {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#timeset {
+  float: left;
+}
+
+#breakset {
+  float: right;
+}
+
+.set-button, .set-number {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: top;
+  height: 40px;
+  line-height: 40px;
+}
+
+.set-button {
+  width: 25%;
+  background-color: #448bff;
+  cursor: pointer;
+}
+
+.set-number {
+  width: 40%;
 }
 
 div {
-  display: block;
-  /* border: 1px solid black; */
+  /*border: 1px solid black;*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;   
+  -ms-user-select: none;    
+  -o-user-select: none;
+  user-select: none;
 }
 
 #timer {
+  display: inline-block;
   height: 300px;
   width: 325px;
-  position: relative;
-  margin: 40px auto;
+  margin: 20px auto;
   border-radius: 45%;
   background-color: #ff6347;
 }
@@ -43,7 +99,6 @@ div {
 }
 
 #clock div {
-  position: relative;
   top: 30%;
   display: inline-block;
   font-size: 50px;
@@ -54,8 +109,8 @@ div {
 }
 
 #controls {
-  position: relative;
-  min-width: 400px;
+  margin: 0 auto;
+  min-width: 350px;
 }
 
 #controls div {
@@ -72,6 +127,7 @@ div {
 
 #status {
   height: 50px;
+  line-height: 50px;
   font-size: 30px;
   margin-bottom: 10px;
 }
