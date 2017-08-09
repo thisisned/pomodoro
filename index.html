@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
-	<title>Pomodoro Timer</title>
-	<link rel="stylesheet" href="css/styles.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
+  <meta charset="UTF-8">
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-	<h1>Pomodoro Timer!</h1>
-	<div id="timer">
-		<div id="greenbit"></div>
-		<div id="clock">
-			<div id="minutes"></div>
-			<div id="seconds"></div>
-		</div>
-		<p id="paused"></p>
+  <h1>Pomodoro Timer!</h1>
+<div id="settings">
+  <div id="timeset">
+    <div class="set-head">Work Mins</div>
+    <div class="set-button work-minus">-</div>
+    <div class="set-number work-num">25</div>
+    <div class="set-button work-plus">+</div>
+  </div>
+  <div id="breakset">
+    <div class="set-head">Break Mins</div>
+    <div class="set-button break-minus">-</div>
+    <div class="set-number break-num">5</div>
+    <div class="set-button break-plus">+</div>
+  </div>
+</div>
+<div id="timer">
+	<div id="greenbit"></div>
+	<div id="clock">
+		<div id="minutes"></div>
+		<div id="seconds"></div>
 	</div>
-	<div id="status"></div>
-	<div id="controls">
-		<div id="start">START</div>
-		<div id="pause">PAUSE</div>
-		<div id="reset">RESET</div>
-	</div>
+	<p id="paused"></p>
+</div>
+<div id="status"></div>
+<div id="controls">
+	<div id="start">START</div>
+	<div id="pause">PAUSE</div>
+	<div id="reset">RESET</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src="js/index.js"></script>
 </body>
+
 </html>
